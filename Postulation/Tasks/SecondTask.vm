@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encora Test</title>
+    <!-- *META -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- *LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+    />
+    <!-- *STYLE -->
+    <style>
+        /* Movile Devices */
+        @media screen and (max-width: 768px) {
+            .custom-size {
+                width: 95% !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+        style="
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: rgb(245, 245, 245);
+        "
+>
+<!-- *Start Wrapper -->
+<!-- !First Section -->
+<table
+        class="custom-size"
+        style="
+                width: 50%;
+                max-width: 95%;
+                margin: 0 auto;
+                padding: 0;
+                background-color: white;
+            "
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+>
+    <!-- *Logo -->
+    <tr>
+        <td align="center" style="padding-top: 10px">
+            <a href="https://www.viator.com/">
+                <img
+                        src="https://cdn.tripadvisor.com/img2/email/viator_logo_v2.png"
+                        alt="Viator Logo"
+                        style="display: block; width: 25%"
+                />
+            </a>
+        </td>
+    </tr>
+
+    <!-- *Title -->
+    <tr>
+        <td
+                style="
+                        text-align: center;
+                        font-weight: 700;
+                        padding: 5% 0 5% 0;
+                        font-size: 2.1vw;
+                    "
+        >
+            <a>Explore the unexpected in<br /></a>
+            <a>$geo_name</a>
+        </td>
+    </tr>
+
+    <!-- *Hero Image -->
+    <tr>
+        <td style="padding: 0" width="100%">
+            <img
+                    src="$geo_image"
+                    alt="Hero Image"
+                    style="display: block; width: 100%"
+            />
+        </td>
+    </tr>
+
+    <!-- *Description -->
+    <tr>
+        <td
+                style="
+                        text-align: center;
+                        padding: 3% 5% 0% 5%;
+                        font-weight: 400;
+                        font-size: 1.1vw;
+                    "
+        >
+            Every destination has its must-sees, but we're here to help
+            you see a side of $geo_name most travelers miss. Venture off
+            the beaten path and escape the crowds with our hand-picked
+            list of experiences that reveal its true character.
+        </td>
+    </tr>
+
+    <!-- *Button -->
+    <tr>
+        <td align="center" style="padding: 3% 3% 5% 3%">
+            <a
+                    href="$geo_link"
+                    style="
+                            display: block;
+                            background-color: rgb(175, 20, 62);
+                            color: #fff;
+                            text-decoration: none;
+                            padding: 4% 4%;
+                            border-radius: 3px;
+                            font-weight: 500;
+                            font-size: 1.1vw;
+                        "
+            >Discover hidden gems</a
+            >
+        </td>
+    </tr>
+
+    <!-- *Top Pick Section -->
+    <tr>
+        <td
+                style="
+                        font-weight: 700;
+                        font-size: 1.6vw;
+                        padding: 0% 0% 5% 3%;
+                    "
+        >
+            Top pick based on your bookings
+        </td>
+    </tr>
+</table>
+
+<!-- !Second Section -->
+#foreach ($product in $recommendedProducts)
+<table
+        class="custom-size"
+        style="
+                width: 50%;
+                max-width: 95%;
+                margin: 0 auto;
+                padding-bottom: 15px;
+                background-color: white;
+            "
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+>
+    <td width="50%" style="padding: 0% 3% 0% 3%">
+        <a style="font-weight: 500; font-size: 1.2vw">
+            $product.product_name
+        </a>
+        <div style="display: flex; margin: 5% 0 5% 0">
+            <div>
+                <img
+                        src="https://cdn.tripadvisor.com/img2/email/rex/ratingstar${product.product_rating}.png"
+                        alt="Rating Star"
+                        style="display: block; width: 7vw"
+                />
+            </div>
+            <div
+                    style="
+                            margin-left: 15px;
+                            font-size: 1.1vw;
+                            font-weight: 400;
+                        "
+            >
+                <a>$product.product_review_count</a>
+                <a> reviews</a>
+            </div>
+        </div>
+        <div>
+            <a
+                    href="$product.product_link"
+                    style="
+                            display: block;
+                            width: 100%;
+                            margin: 0 auto;
+                            background-color: #fff;
+                            color: rgb(175, 20, 62);
+                            text-decoration: none;
+                            font-size: 1.1vw;
+                            padding: 7% 0;
+                            border: 1px solid rgb(175, 20, 62);
+                            border-radius: 3px;
+                            text-align: center;
+                            font-weight: 600;
+                        "
+            >See details</a
+            >
+        </div>
+    </td>
+    <td width="50%" style="padding-right: 3%">
+        <img
+                src="$product.product_photo_url"
+                alt="$product.product_name"
+                style="display: block; width: 100%"
+        />
+    </td>
+</table>
+#end
+<!-- *End Wrapper -->
+</body>
+</html>

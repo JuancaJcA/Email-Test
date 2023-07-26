@@ -1,0 +1,37 @@
+Velocity and Liquid Problem Set
+
+Assets
+ - Design_A.png
+ - Design_B.png
+ - Sample_data.json
+ - Viator Logo: https://cdn.tripadvisor.com/img2/email/viator_logo_v2.png 
+ 	- Link: https://www.viator.com/ 
+ - Hero Image: https://cdn.tripadvisor.com/img2/email/vr/aps5-2_barcelona.jpg 
+ 	- Link: https://www.viator.com/collections/Hidden-Gems-in-Barcelona/c7 
+ - Recommendation Image: https://media.tacdn.com/media/attractions-splice-spp-360x240/07/1e/c1/f3.jpg 
+ 	- Link: https://www.viator.com/tours/x/x/d0-2140BCNHOP 
+ - Rating Star icons:
+ 	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar1.0.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar1.5.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar2.0.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar2.5.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar3.0.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar3.5.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar4.0.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar4.5.png 
+	- https://cdn.tripadvisor.com/img2/email/rex/ratingstar5.0.png 
+
+Documentation
+ - Velocity: https://velocity.apache.org/engine/devel/user-guide.html  
+ - Liquid: https://shopify.dev/docs/api/liquid#liquid_basics
+
+Instructions
+ - There are three tasks in this assignment and the total expected output is 3 files (1 for each task)
+ - First Task - "HTML/CSS file"
+ 	- Produce the email design seen in Design_A.png using HTML/inline-CSS that is best supported by email platforms. (You can send tests to your inbox using https://putsmail.com/tests/new) 
+ 	- This sample will be rendered across different email platforms in order to verify that the markup displays consistently.
+ - Second Task - "Velocity file"
+ 	- Given what you have learned in the First Task, develop a new file using Design_B.png as the design.
+ 	- This second file should include the use of Velocity to handle the dynamic parts of the design which are included in the sample_data.json file.
+ - Third Task - "Liquid File"
+ 	- Take what you have learned in the Second Task, rewrite the logic of the email using Liquid instead of Velocity, and make the product card used in the recommendation section reusable.
